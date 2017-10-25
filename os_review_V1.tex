@@ -173,6 +173,13 @@ inference of latent causes and the assignment of state-dependent action values
 describe how it deals with OS. Lastly, we demonstrate the account's utility by 
 pointing to its behavioral and neural predictions. 
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figures/Fig1}
+\caption{\bsf{(a)} Positive occasion setting (left) and negative occasion setting (right). ``F'' denotes the feature cue, ``T'' is the target, and ``$+$'' is reward (``$-$'' is its omission). \bsf{(b)} Tree diagram describing relationships between tasks involving ambiguity resolution. Tasks are separated into three categories depending on whether the feature is discrete, contextual, or a response. Within the discrete-feature category, tasks are further categorized by whether the feature serially precedes the target or is presented with it simultaneously.}
+\label{fig:ambiguityTasks}
+\end{figure}
+
 \section*{Occasion setting and ambiguity resolution}
 
 In OS, subjects learn to identify the meaning of a target cue (T) depending on 
@@ -202,7 +209,7 @@ simultaneously \cite{Holland1992}.
 Overall, OS has received a great deal of attention from learning theorists, as 
 occasion setters hold properties that make them distinct from regular 
 conditioned stimuli (CSs). First, it has been demonstrated that a CS with 
-positive reward predictive value (i.e., exciters) often comes to elicit a CS-
+positive reward predictive value (i.e., an exciter) often comes to elicit a CS-
 specific conditioned response. In rats, for instance, auditory exciters elicit 
 head jerking, while visual exciters elicit rearing \cite{Holland1984}. In OS, 
 the feature is only used in order to inform the current value of the target; 
@@ -244,11 +251,22 @@ loose benchmark (see below) for a successful model of OS:
    effect).
 \end{enumerate}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figures/Fig2}
+\caption{Feature-positive effect. R denotes the rewarded trial type, and NR the 
+unrewarded trial type. The simulated acquisition curves demonstrate the feature-
+positive effect, as in the case of POS, discrimination between R and NR trials 
+occurs earlier than in NOS. The diagram is based on data in \citeN{Holland1999}, 
+and \citeN{Bouton2011}.}
+\label{fig:FPeffect}
+\end{figure}
+
 % Paragraph to caution reader against viewing our benchmarks as dogma
 It is necessary to point out that not all of the above ``benchmarks'' have been 
 equally well established. In one study, rats trained in an OS paradigm passed 
 the requirement for response form (1), but not for counterconditioning (2) 
-\cite{Moreira2003a}. The data on OS transfer effects (3) have been particularly 
+\cite{Moreira2003}. The data on OS transfer effects (3) have been particularly 
 variable - for instance, occasion setting properties do transfer (albeit not 
 completely) to a non-target cue if it is similar to the original target 
 \cite{Swartzentruber1995}, or if both cues predict the same reinforcer (i.e., 
@@ -256,7 +274,7 @@ US-specific transfer; see \citeNP{Bonardi2012,Bonardi2017}). Indeed, the
 feature-positive effect (4) seems to be among the most consistent results, 
 making appearance in a large variety of behavioral tasks (see 
 \citeNP{Jenkins1970,Bouton2011,Bouton2012,Holland1999}). In our view, these 
-apparent inconsistencies further underscore the need for novel theoretical 
+inconsistencies further underscore the need for novel theoretical 
 frameworks in OS. 
 
 A large number of behavioral tasks apart from OS have modeled ambiguity 
@@ -314,6 +332,19 @@ associative accounts of classical conditioning. In this section, we discuss 3
 existing accounts of OS: hierarchical theory, configural theory, and the SLH 
 model (Figures 3 and 4). We give a brief description of each, and discuss 
 specific predictions pertaining to the 4 criteria we identified. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figures/Fig3}
+\caption{Two accounts of OS. \bsf{(a)} The hierarchical account of OS posits 
+that the feature (F) gates the target's (T) association with reward ($+$). 
+\bsf{(b)} The configural account assumes that all cues present on a given trial 
+are encoded as a configural stimulus comprising of cue-specific and configure-
+specific components; for example, on an F $\rightarrow$ T$+$ trial, cues are 
+represented as a configure X consisting of F-specific, and T-specific 
+components.}
+\label{fig:traditionalAccounts}
+\end{figure}
 
 {\bf Hierarchical theory}. This account claims that the occasion setter comes 
 to modulate the specific association between the target and reward (Figure 3a). 
@@ -417,6 +448,19 @@ original paper \cite{Schmajuk1998}, the authors demonstrate that SLH can
 simulate POS and NOS in a manner that is consistent with appropriate response 
 form (1), counterconditioning phenomena (2), and transfer effects (3). 
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figures/Fig4}
+\caption{The SLH connectionist model comprises an input layer, a hidden layer, 
+and an output layer. A, B = conditioned stimuli; trS = trace memory of a 
+stimulus; H = hidden-unit representing a configuration of A and B; VSH = 
+association between conditioned stimulus and hidden unit; trH = trace memory of 
+a hidden unit; VS = direct association between conditioned stimulus and outcome; 
+VH = direct association between hidden unit and outcome; CR = conditioned 
+response.}
+\label{fig:SLH}
+\end{figure}
+
 Despite these strong points, the model does not seem to account for the 
 feature-positive effect; while this phenomenon is never explicitly mentioned in 
 the text, the simulated acquisition curves for POS and NOS do not suggest any 
@@ -443,7 +487,7 @@ on the state that is currently active. This general approach has brought about
 unprecedented strides in the domains of reinforcement learning 
 (\citeNP{Sutton1998,Maia2009}), and has also been useful in explaining 
 classical conditioning phenomena (see 
-\citeNP{Courville2006,Redish2007,Fuhs2007,Gershman2010,Gershman2010a,Gershman2012}). 
+\citeNP{Courville2006,Redish2007,Fuhs2007,Gershman2010a,Gershman2010b,Gershman2012}). 
 In the following sections, we argue that a state-based framework is just as 
 useful in accounting for OS, and ambiguity resolution more broadly.
 
@@ -521,6 +565,21 @@ of the model discussed in the text: $P(\textbf{w} \given \text{observations}) =
 \frac{P(\text{observations} \given \textbf{w}) \, P(\textbf{w})}
 {P(\text{observations})}$}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figures/Fig5}
+\caption{Latent causes C1 and C2 are assumed to generate certain environmental 
+observations - namely, observations of the feature (F), the target (T), and 
+reward ($+$); given an active cause, weight w gives the likelihood of making the 
+associated observation. In general, OS is solved by associating the individual 
+trial types with distinct latent causes. \bsf{(a)} Prior assumptions of the 
+model are given by pre-existing connections between causes and events. \bsf{(b)} 
+Upon experiencing a T$+$ trial, cause C1 is inferred by strengthening the 
+appropriate weights. \bsf{(c)} L $\rightarrow$ T$-$ observations become linked 
+with latent cause C2.}
+\label{fig:latentCause}
+\end{figure} 
+
 It can be shown that this model can acquire the stimulus contingencies specific 
 to trial types in OS. For example, if a reward ($+$) is consistently delivered 
 whenever a target cue (T) sets off (i.e., a T$+$ trial), weights w$_{1}$ and w
@@ -560,12 +619,12 @@ links. This is a significant limitation, given that the model constrains the
 animal's experiences to a finite number of observations.
 
 This problem is addressed in a variant of the generative model proposed by 
-\citeN{Gershman2010}. The authors present a normative Bayesian statistical 
+\citeN{Gershman2010b}. The authors present a normative Bayesian statistical 
 framework that involves generative and inferential models designed to tackle 
 conditioning phenomena such as renewal and latent inhibition. The model was 
 inspired by a previously described TDRL algorithm that had additionally been 
 designed to carry out state splitting \cite{Redish2007}. A crucial aspect of 
-the \citeN{Gershman2010} model is that it involves an infinite parameter space 
+the \citeN{Gershman2010b} model is that it involves an infinite parameter space 
 - given an observation, the model classifies it into a cluster of observations 
 that corresponds to a common latent cause. In case the observation is not 
 easily categorized into existing clusters, it is classified into its own 
@@ -574,6 +633,273 @@ formally known as the Dirichlet process, and has often been illustrated by a
 metaphor dubbed as the Chinese Restaurant process (see Box 1). Overall, this 
 allows the model to account for the large number of distinct observations that 
 animals encounter.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figures/Box1}
+\label{fig:dirichlet}
+\end{figure}
+
+\section*{Behavioral Predictions}
+
+When a subject receives OS training (interspersed F $\rightarrow$ T and T 
+trials), then according to a state-based account, F comes to control 
+differential responding by prompting the agent to infer a novel state within 
+which T comes to hold a different value. According to this view, the speed at 
+which the discrimination is acquired depends on the degree to which the agent 
+is prone to inferring novel states (e.g., within the latent cause theory, it is 
+proportional to the parameter $\alpha$; see Box 1) From this new perspective on 
+OS acquisition follow a number of behavioral predictions.
+
+If the additional state that is required to solve OS were already inferred, the 
+discrimination ought to be acquired more rapidly. This prediction can be tested 
+by training animals in two consecutive OS regimes. In the first phase, animals 
+are trained in an OS paradigm that consists of F $\rightarrow$ T and T trials 
+(OS1). A state-based account posits that acquisition will involve using F to 
+toggle a unique state within which T acquires a new meaning. This can be tested 
+by commencing a second OS training schedule that involves F $\rightarrow$ T' 
+and T' (OS2). In this second phase, F is already trained to toggle a unique 
+state. As such, acquisition of OS2 should occur more rapidly than acquisition 
+of OS1. 
+
+A related prediction is that acquisition ought to proceed more rapidly if the 
+rewarded state is made more distinct from the unrewarded state. One possibility 
+would be to make F more salient. However, increasing the salience of F relative 
+to that of T is known to promote conditioned inhibition, a form of learning 
+that is distinct from OS. Given that acquisition of OS is highly parameter-
+dependent \cite{Holland1992}, it is not trivial to determine which manipulation 
+would make the ``F'' state more distinct from the ``no F'' state whilst 
+preserving all the parameters that normally favor acquisition of OS. However, 
+one interesting option might be to make F long. Prolonging dwell time in the 
+``F'' state might make it more different from the ``no F'' state, thus 
+increasing the rate of OS acquisition. This manipulation simulates the 
+effective presence of a distinct context (e.g., lighting of the conditioning 
+chamber that persists), thereby making the task similar to contextual OS, which 
+is generally acquired faster than discrete-cue OS (cite!!!). 
+
+A conceptually similar manipulation is to alter the rate of OS acquisition by 
+making the ``F'' state perceptually similar to the ``no F'' state. This would 
+render the inference of a novel state more difficult, thereby slowing the rate 
+of acquisition. Experimentally, this can be achieved by signaling the ``F'' and 
+``no F'' states with background lights of similar light intensities. 
+Interestingly, \citeN{Gershman2013} successfully tested this general idea by 
+taking advantage of the renewal effect. Renewal comprises three distinct phases; 
+first, a CS-US contingency is acquired in a conditioning context. Next, the CS 
+undergoes an extinction phase in which conditioned responding is reduced by 
+repeatedly presenting the CS in the absence of the US (CS-noUS). In a crucial 
+test, the animal is moved outside the extinction context, and expresses 
+resurgence of responding (i.e., renewal) when it next encounters the CS 
+\cite{Bouton2004}. It is thought that the extinction phase produces a novel CS-
+US contingency whose retrieval depends on contextual disambiguation. In the 
+language of a state-based account, the animal infers a new state in the 
+extinction context, which explains why extinction learning does not generalize 
+to other context. \citeN{Gershman2013} tested this idea by presenting a mix of 
+CS-US and CS-noUS trials in the extinction phase, such that the proportion of 
+CS-noUS trials gradually increased later in the session. This was hypothesized 
+to make the extinction context more similar to the conditioning context, thereby 
+preventing the inference of a novel state. Consistent with this idea, the 
+renewal effect was not observed when the animals were tested outside the 
+extinction context.  
+
+\section*{Neural Predictions}
+
+We have argued above that ambiguity resolution requires a segmentation of
+experience into distinct states, wherein otherwise ambiguous target stimuli 
+acquire a clear meaning. The problem of resolving ambiguities therefore becomes 
+a problem of acquiring an appropriate state space. The latent cause theory is a 
+plausible algorithmic answer to this conundrum. In the present section, we 
+briefly discuss two brain regions that are well-positioned to implement such a 
+process: namely the hippocampus (HC), and the orbitofrontal cortex (OFC) (see 
+\citeNP{Wikenheiser2016} for a detailed review on state encoding in these 
+regions). We conclude by suggesting specific neurophysiological manipulations 
+that will shed light on the flow of information across these regions in a task 
+like NOS. 
+
+{\bf Evidence for State Encoding in HC and OFC} 
+
+The concept of state space is related to Tolman's notion of a cognitive map 
+\cite{Tolman1948}. Within this framework, subjects infer the variables that are 
+relevant for current behavioral demands, and update an internal relational map 
+of their environment that is recruited in order to drive adaptive behavior. In 
+a similar vein, state spaces enable behavioral flexibility by segmenting 
+experience into discrete chunks whose contents can often be contradictory 
+(e.g., respond to T in ``no F'' state, withhold response in ``F'' state, as in 
+NOS). The benefits of maintaining a state space are equivalent to those 
+provided by a map - each reduces uncertainty about the environment. 
+
+Hippocampal place cells selectively fire in localized regions of space that 
+tile the animal's environment \cite{OKeefe1971,OKeefe1978}; for this reason, 
+the hippocampus is the brain region most commonly thought of as storing a 
+Tolmanian cognitive map. There are a number of ways to conceptualize state 
+representations in the hippocampus, and these depend on different levels of 
+granularity. 
+
+At the single cell level, the spatial field a `place cell' responds to can be 
+thought of as representing a discrete state in a spatial map. Interestingly, a 
+recent article by \citeN{Stachenfeld2017} recasts this long-standing idea by 
+proposing that single place cells encode expectations of a fixed future state 
+given the current state; this frames the hippocampus as a predictive spatial 
+map. In any case, the entire population of responsive place cells forms a 
+macrostate that represents the animal's current context (e.g., conditioning 
+chamber). The importance of this emerges when the animal is placed in a novel 
+context. Place cells undergo a transition to a novel state (traditionally 
+referred to as a `remapping') in which they acquire tuning that is often 
+completely unrelated to that in the former context 
+\cite{Muller1987,Muller1996}. Not surprisingly, performance in a variety of 
+tasks that depend on successful retrieval of context-dependent information is 
+typically impaired in animals with a damaged hippocampus 
+\cite{Honey1993,Holt1999,Gilbert2001,Corcoran2004,Maren2013,Xu2016}. 
+
+A somewhat different picture of state encoding emerges at the level of 
+sequential place cell activity. As the animal moves through its environment, 
+sequences of place cell firing track a specific behavioral trajectory. 
+Crucially, these sequences also occur at faster time-scales, and sometimes 
+extend beyond the animal's immediate location. \citeN{Johnson2007} demonstrated 
+that this tends to occur as the animal prospectively samples options before 
+making a decision (often dubbed as `vicarious trial and error'; see 
+\citeNP{Tolman1939,Redish2016}). At the choice point, hippocampal sequences 
+extended along potential paths to reward before the animal set out. In other 
+words, the sequences reflect internal simulations of alternative trajectories 
+towards reward. Each can be thought of as a distinct state whose value depends 
+on the animal's belief as to which trajectory is currently rewarded. Crucially, 
+the contents of hippocampal sequences are not exclusively spatial. A number of 
+studies have demonstrated that delay periods requiring maintenance of past 
+information to inform a future response (e.g., delayed T-maze alternation and 
+match-to-sample tasks) are characterized by hippocampal sequences that are 
+predictive of subsequent behavior 
+\cite{Pastalkova2008,MacDonald2011,MacDonald2013}.
+
+Apart from the hippocampus, a number of areas in the prefrontal region have 
+been implicated in state learning. Consistent with its general role in 
+cognitive control 
+\cite{Botvinick2001,Liston2006,Casey2005,Haddon2006,Haddon2007,Braver2012}, the 
+prefrontal cortex (PFC) has been framed as an executive controller that uses 
+task-dependent event-outcome relations to mediate processing in downstream 
+regions \cite{Miller2000}. For instance, medial PFC undergoes population-level 
+shifts in network dynamics during changes in task structure 
+\cite{Durstewitz2010,Karlsson2012}, which are thought to reflect a formation of 
+discrete states that support disparate rules. 
+
+Furthermore, a great deal of evidence suggests that orbitofrontal cortex (OFC) 
+plays an important role in state space acquisition. First, a well-functioning 
+OFC is necessary to maintain behavioral flexibility in the face of a 
+dynamically changing environment \cite{Bechara1994}. For instance, animals with 
+OFC lesions show deficits in reversal learning 
+\cite{Schoenbaum2003a,Delameter2007}, which requires the inference of novel task 
+contingencies, and an update of current behavioral strategy. Second, OFC 
+represents the current value of relevant events. Its neurons track stimuli that 
+are predictive of a specific outcome, and thereby abstract beyond value 
+encoding that is linked to a specific stimulus 
+\cite{Schoenbaum1998,Baxter2000,Schoenbaum2003b}. Furthermore, OFC neurons have 
+the capacity to decompose an event into its components (e.g., informativeness, 
+value, etc.), and represent these via orthogonal codes \cite{Blanchard2015}. 
+These seemingly disparate roles - i.e., behavioral flexibility and value 
+encoding - are consistent with a recent theory of OFC function. 
+\citeN{Wilson2014} suggest that unexpected changes in task contingencies (as 
+in serial reversal learning) are handled by inferring OFC states whose contents 
+store the values of relevant events. To test this hypothesis, the authors 
+modeled OFC lesions as an inability to maintain more than one state at a time. 
+Amazingly, this simple assumption was sufficient to account for a large body of 
+research detailing the effects of OFC lesions on behavior in a number of 
+related tasks (e.g., reversal learning, extinction, devaluation, delayed 
+alternation, etc.). Crucially, OFC states are thought to be more abstract, 
+encoding task variables that are not explicitly observed, and must therefore be 
+inferred \cite{Bradfield2015,Stalnaker2015}.
+
+Indeed, HC and OFC likely cooperate by contributing unique components to a more 
+holistic state space representation \cite{Wikenheiser2016}. In a T-maze 
+alternation task, distinct OFC neurons selectively fire at each of the reward 
+sites \cite{Steiner2012}. Surprisingly, during periods of `vicarious trial and 
+error' (as described above), these representations of far-away reward become 
+active. It is plausible that this corresponds to an assignment of value to the 
+behavioral trajectories simulated in the hippocampus, resulting in a complex, 
+multidimensional state space that allows exploration of spatial trajectories in 
+the service of obtaining reward. The anatomical connectivity between OFC and HC 
+certainly supports this hypothesis: while projections from OFC to HC are 
+indirect \cite{Prasad2013}, those from HC to OFC are direct 
+\cite{Jay1991,Barbas1995}. This suggests the interesting possibility that 
+simulated `lookaheads' in HC cue the OFC, which imbues the simulated 
+trajectories with biological meaning. Overall, our working hypothesis suggests 
+that HC and OFC coordinate in order to store a state space that is drawn upon 
+to enable adaptive behavior. Given that OFC and HC projections converge on the 
+nucleus accumbens (NAcc) \cite{Mogenson1980}, we propose that state information 
+is passed down to this region in order to promote context-appropriate behavior. 
+NAcc is a suitable candidate for this downstream processing, given its role in 
+invigorating reward-related responding based on interactions with frontal and 
+temporal regions \cite{Floresco2015}. Furthermore, a number of studies have 
+already demonstrated that activity between HC/OFC and NAcc is tightly 
+coordinated \cite{Cooch2015,VanderMeer2011}. Next, we explore the putative 
+roles of these regions in ambiguity resolution.
+
+{\bf Neurobiology of Ambiguity Resolution}
+
+Apart from discussing the roles of HC and OFC in state encoding, the previous 
+section already implies their involvement in ambiguity resolution. Both of 
+these regions are crucial in a number of ambiguity resolution tasks listed in 
+Figure 1 (e.g., T-maze alternation, delayed match-to-sample, serial reversal 
+learning, etc.). As such, it is unsurprising that HC and OFC have been 
+implicated in OS.  
+
+Only a handful of studies have investigated the role of prefrontal regions in 
+OS. For instance, simultaneously disrupting activity in OFC and NAcc leads to 
+protracted acquisition of NOS \cite{Meyer2016}. A related study showed that 
+pretraining lesions of the mPFC prelimbic region retard acquisition of NOS, 
+consistent with this region's role in acquiring behavioral strategies 
+(\citeNP{MacLeod2010}; also see \citeNP{Meyer2014}). These results suggest 
+that OFC and mPFC play a role in the acquisition of NOS.
+
+Although there has been more research into the role of HC in OS, results have 
+been mixed. While aspiration lesions prevented acquisition of POS 
+\cite{Ross1984}, ibotenic acid lesions had no effect \cite{Jarrard1990}. Both 
+of these results were replicated by \citeN{Jarrard1991}, who also observed that 
+aspiration lesions produced greater extra-hippocampal damage than ibotenic acid 
+lesions. The authors concluded that the deficit in POS resulted from damage to 
+structures outside the hippocampus. A number of later studies corroborated this 
+conclusion \cite{Moreira2003,Holland1999}. Interestingly, \citeN{Holland1999} 
+further found that neurotoxic hippocampal lesions caused a marked deficit in 
+acquiring NOS. These results point to an interesting asymmetry behind HC's 
+involvement in acquiring POS as opposed to NOS. It is plausible that a deeper 
+investigation of this phenomenon may help us understand the neural basis of the 
+feature-positive effect.
+
+While these studies suggest that OFC and HC are involved in the acquisition of 
+OS, the existing literature leaves a great deal to be desired. To our 
+knowledge, no one has investigated whether OFC, HC, and NAcc are necessary for 
+the performance of OS. This question could be probed by reversibly inactivating 
+each region at peak performance using chemogenetic tools such as DREADDs. 
+Furthermore, the nature of information flow across these regions remains 
+largely unknown. To this end, reversible disconnections between all pairs of 
+regions would help establish whether communication between them is necessary 
+for acquisition (disconnect throughout training) or performance (disconnect at 
+peak responding). After establishing the macro-scale interactions that support 
+OS, a more fine-grained investigation would need to be conducted to reveal the 
+neural interactions that are necessary for correct responding within a single 
+trial. On any given trial, the correct state must be toggled based on the 
+presence or absence of the feature (presumably, this occurs in HC and OFC), and 
+this information must ultimately reach NAcc in order to facilitate responding 
+once the target cue comes on. It is unclear, however, whether this information 
+transfer occurs all throughout the interstimulus interval, if it is confined to 
+the period of the feature cue, or to the period of the target. These 
+interesting possibilities can be parsed out by optogenetically inactivating 
+each region during periods of interest (i.e., interstimulus interval, target 
+presentation). Lastly, large-scale electrophysiological recordings would need 
+to be conducted in order to identify the nature of information being coded. It 
+is of particular interest whether network activity could be successfully 
+decoded to predict the animal's response on any given trial. 
+
+In fact, the first steps in this direction have already been made by 
+\citeN{Shobe2017}, who recorded from a population of OFC neurons while head 
+restrained mice performed a NOS task. The proportion of OFC neurons whose 
+firing rates discriminated between rewarded and unrewarded instances of the 
+target correlated with performance on the task. More importantly, however, the 
+authors discovered that during the interval preceding target presentation, OFC 
+network activity was significantly different on rewarded versus unrewarded 
+trials. Furthermore, this network state was identical irrespective of 
+performance to the upcoming target. Even though OFC state does not predict 
+trial performance, it is possible that it alters activity in a downstream 
+region (e.g., NAcc), where upcoming performance could be decoded. This again 
+begs the question whether OFC needs to be online during the interstimulus 
+interval, underscoring the importance of the manipulations we propose above. 
 
 \bibliography{os_review}{}
 
